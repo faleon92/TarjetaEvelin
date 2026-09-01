@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💕 Mi Sorpresa De Amor 💕</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            animation: fadeIn 0.8s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 550px;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 25px;
+            padding: 50px 40px;
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.35);
+            text-align: center;
+            animation: slideUp 0.8s ease-out;
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .heart-main {
+            font-size: 80px;
+            margin-bottom: 20px;
+            animation: heartBeat 1s ease-in-out infinite;
+        }
+        
+        @keyframes heartBeat {
+            0%, 100% { transform: scale(1); }
+            25% { transform: scale(1.3); }
+            50% { transform: scale(1); }
+        }
+        
+        h1 {
+            font-size: 38px;
+            color: #ec4899;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 35px;
+            line-height: 1.8;
+            font-style: italic;
+        }
+        
+        .content-box {
+            background: linear-gradient(135deg, #fce7f3, #fecaca);
+            padding: 30px;
+            border-radius: 20px;
+            margin: 30px 0;
+            border: 2px solid #ec4899;
+        }
+        
+        .content-box h2 {
+            color: #ec4899;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .content-box p {
+            color: #2d3436;
+            font-size: 15px;
+            line-height: 1.8;
+            margin: 10px 0;
+        }
+        
+        .messages {
+            background: white;
+            border: 2px solid #f0f0f0;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+        }
+        
+        .messages-title {
+            color: #ec4899;
+            font-weight: 700;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        
+        .message-item {
+            color: #333;
+            font-size: 14px;
+            line-height: 1.8;
+            margin: 12px 0;
+            padding: 12px;
+            background: #f9f9f9;
+            border-radius: 8px;
+        }
+        
+        .buttons-group {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 35px 0;
+        }
+        
+        .btn {
+            padding: 16px 32px;
+            border: none;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-width: 180px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #ec4899, #f43f5e);
+            color: white;
+            box-shadow: 0 8px 25px rgba(244, 63, 94, 0.35);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 35px rgba(244, 63, 94, 0.5);
+        }
+        
+        .btn-secondary {
+            background: #f5f5f5;
+            color: #333;
+            border: 2px solid #ddd;
+        }
+        
+        .btn-secondary:hover {
+            background: #efefef;
+            border-color: #ec4899;
+        }
+        
+        .emoji-decoration {
+            font-size: 32px;
+            margin: 20px 0;
+            letter-spacing: 12px;
+        }
+        
+        .signature {
+            margin-top: 40px;
+            padding-top: 25px;
+            border-top: 2px solid #f0f0f0;
+            color: #999;
+            font-size: 13px;
+        }
+        
+        .signature p {
+            margin: 8px 0;
+        }
+        
+        .signature-strong {
+            color: #ec4899;
+            font-weight: 700;
+        }
+        
+        .note {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            color: #856404;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 12px;
+            line-height: 1.6;
+            margin-top: 20px;
+        }
+        
+        @media (max-width: 500px) {
+            .card {
+                padding: 30px 20px;
+                border-radius: 20px;
+            }
+            h1 {
+                font-size: 28px;
+            }
+            .heart-main {
+                font-size: 60px;
+            }
+            .buttons-group {
+                flex-direction: column;
+            }
+            .btn {
+                width: 100%;
+                min-width: unset;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="heart-main">💕</div>
+            
+            <h1>¡Para Ti, Mi Amor! 💕</h1>
+            
+            <p class="subtitle">
+                He preparado una sorpresa digital especial llena de nuestros momentos, fotos hermosas y promesas de amor para nuestro futuro juntos.
+            </p>
+            
+            <div class="content-box">
+                <h2>✨ Lo que verás:</h2>
+                <p>📸 <strong>Página 1:</strong> Portada con girasoles hermosos</p>
+                <p>🌻 <strong>Página 2:</strong> Nuestras fotos juntos + mensaje especial</p>
+                <p>💝 <strong>Página 3:</strong> Foto tuya + mi promesa de amor</p>
+            </div>
+            
+            <div class="messages">
+                <div class="messages-title">💌 Mis Mensajes Para Ti:</div>
+                <div class="message-item">
+                    "Te amo más cada día" 💕
+                </div>
+                <div class="message-item">
+                    "La vida es más linda con flores mi niña bonita" 🌻
+                </div>
+                <div class="message-item">
+                    "Eres mi niña bonita que ilumina mi existir" ✨
+                </div>
+                <div class="message-item">
+                    "A pesar de las dificultades, seguiremos eligiéndonos el uno al otro, siguiendo el camino de nuestro Dios" 🙏
+                </div>
+            </div>
+            
+            <div class="emoji-decoration">
+                🌹 💐 🌺 🌸 🌻
+            </div>
+            
+            <div class="buttons-group">
+                <button class="btn btn-primary" onclick="mostrarInstrucciones()">
+                    💝 Ver Cómo Funciona
+                </button>
+                <button class="btn btn-secondary" onclick="descargarTarjeta()">
+                    📥 Descargar Tarjeta
+                </button>
+            </div>
+            
+            <div class="note">
+                <strong>📱 INSTRUCCIONES:</strong><br>
+                1. Descarga o abre el archivo: <strong>tarjeta_amor_fernando.html</strong><br>
+                2. Ábrelo en tu navegador (Chrome, Safari, Firefox)<br>
+                3. ¡Disfruta la sorpresa! 💕
+            </div>
+            
+            <div class="signature">
+                <p>Hecho con todo mi amor y dedicación para ti</p>
+                <p><span class="signature-strong">Con todo mi corazón, Fernando 💌</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function mostrarInstrucciones() {
+            alert(
+                '📱 PARA VER LA TARJETA COMPLETA:\n\n' +
+                '1. Busca el archivo: tarjeta_amor_fernando.html\n' +
+                '2. Ábrelo con tu navegador\n' +
+                '3. Verás 3 páginas con:\n' +
+                '   - Girasoles\n' +
+                '   - Nuestras fotos\n' +
+                '   - Mensajes de amor\n\n' +
+                '¡Te amo! 💕'
+            );
+        }
+        
+        function descargarTarjeta() {
+            alert(
+                'El archivo tarjeta_amor_fernando.html está en la misma carpeta.\n\n' +
+                'Simplemente abrelo con tu navegador. 💕'
+            );
+        }
+    </script>
+</body>
+</html>
